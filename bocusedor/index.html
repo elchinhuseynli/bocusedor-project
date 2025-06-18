@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bocuse d'Or – Form Page</title>
+    <meta name="description" content="Bocuse d'Or - Rezidence VaryLife!" />
+    <link rel="icon" href="https://taycher.cz/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Impact&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/css/intlTelInput.min.css"
+    />
+    <link rel="stylesheet" href="bocusedor-style.css" />
+  </head>
+  <body>
+    <div class="grid">
+      <div class="col_left">
+        <div class="logo_varylife">
+          <img src="assets/logo_varylife.svg" alt="Varylife" />
+        </div>
+        <img
+          src="assets/title_varylife.svg"
+          alt="Varylife"
+          class="varylife_title"
+        />
+        <div class="house_wrapper">
+          <img src="assets/house.png" alt="varylife building" class="house" />
+        </div>
+      </div>
+      <div class="col_right">
+        <div class="title_wrapper">
+          <h1 class="title_heading">Rezidence VaryLife</h1>
+          <p class="title_description">
+            Nový standard bydlení v Karlových Varech
+          </p>
+        </div>
+
+        <form
+          class="form_wrapper"
+          action="https://usebasin.com/f/4eb4f0e9b298"
+          method="POST"
+          data-basin-form
+          data-basin-success-id="form-success"
+          data-basin-error-id="form-error"
+          data-basin-success-action="render"
+        >
+          <div class="form_group">
+            <label class="form_label" for="name">Jméno</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Zadejte prosím své jméno"
+              class="form_input"
+              required
+              minlength="2"
+            />
+          </div>
+          <div class="form_group">
+            <label class="form_label" for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Zadejte prosím svůj e-mail"
+              class="form_input"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Zadejte platnou e-mailovou adresu (např. jmeno@example.com)"
+              required
+            />
+          </div>
+          <div class="form_group">
+            <label class="form_label" for="phone">Telefon</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Zadejte prosím své telefonní číslo"
+              class="form_input"
+              required
+            />
+          </div>
+          <div class="form_group">
+            <label class="form_label" for="consent"></label>
+            <input type="checkbox" id="consent" name="consent" required />
+            Souhlasím se
+            <a
+              href="https://varylife.cz/zasady-ochrany-osobnich-udaju.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >zpracováním osobních údajů</a
+            >
+          </div>
+          <button class="form_button" type="submit">Chci flashku</button>
+        </form>
+
+        <div
+          id="form-success"
+          style="display: none"
+          class="form-message form-message_success"
+        >
+          <strong>Děkujeme za váš zájem.</strong><br />
+          <span>
+            Flashdisk s informacemi a speciální nabídkou už na vás čeká..
+          </span>
+        </div>
+
+        <div
+          id="form-error"
+          style="display: none; color: red"
+          class="form-message form-message_error"
+        >
+          <strong>Nastala chyba při odesílání.</strong><br />
+          <span
+            >Prosím zkuste to znovu nebo nás kontaktujte přímo e-mailem.</span
+          >
+        </div>
+
+        <div class="footer_wrapper">
+          <img
+            src="assets/logo_taycher.svg"
+            alt="logo Taycher"
+            class="footer_logo"
+          />
+          <img
+            src="assets/logo_Bocuse.svg"
+            alt="logo Bocuse d'Or"
+            class="footer_logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Basin JS v2 (required for UseBasin integration) -->
+    <script src="https://js.usebasin.com/v2.8.0.min.js" defer></script>
+
+    <!-- International telephone input libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js@1.10.25/bundle/libphonenumber-max.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.10/build/js/intlTelInput.min.js"></script>
+
+    <script src="bocusedor-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But not the bocusedor folder
+!bocusedor/
+!bocusedor/**
+
+# Ignore .gitignore itself
+!.gitignore 
